@@ -204,6 +204,13 @@ scripts/   构建与刷写
   kp_patch3.sh          KernelPatch 注入
 
 docs/移植记录.md        完整移植过程与踩坑记录
+
+src/       完整改动源码（可直接覆盖到内核树，详见 src/README.md）
+  kernel/drivers/kernelsu/   完整 SukiSU 驱动（含 4.19 适配修改）
+  kernel/fs/                 SUSFS 核心与 ABI 翻译层
+  kernel/include/linux/      susfs 头文件
+  kernel-hooks/              改过的内核原生文件（stat / open / sys / exec）
+  module/gl_init.c           wlan EMI 地址兜底
 ```
 
 ---
